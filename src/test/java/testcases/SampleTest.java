@@ -1,32 +1,45 @@
 package testcases;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
+
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import pages.Contact;
-import pages.Person;
 import pages.PolicyCenter;
 
 public class SampleTest {
-	WebDriver driver;
+	public WebDriver driver;
 	PolicyCenter polCenter;
+//	@Test
 	@Before
 	public void setUp() throws Exception {
-//		System.setProperty("webdriver.gecko.driver", "E:\\geckodriver.exe");
-		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver.exe");
-//		driver = new FirefoxDriver();
-		driver = new ChromeDriver();
-        driver.manage().window().maximize();
+		Properties data = new Properties();
+		FileInputStream fis = new FileInputStream(new File("C:\\Users\\eazana.PICL-9FJPRF2\\eclipse-workspace\\TestSelenium\\src\\test\\java\\data\\browserdata.properties"));
+		data.load(fis);
+		
+		switch(data.getProperty("browser")) {
+			case "firefox":
+				System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
+				driver = new FirefoxDriver();
+			break;
+			case "chrome":
+				System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+				driver = new ChromeDriver();
+			break;	
+			
+		}
+		driver.get(data.getProperty("url"));
 		
 	}
 	
 	@After
 	public void tearDown() throws Exception {
-		driver.quit();
+//		driver.quit();
 	}
-	@Test
+//	@Test
 	public void verifyLoginPage() throws Exception {
 		polCenter = new PolicyCenter(driver);
 		polCenter.login("su", "gw");
