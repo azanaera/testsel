@@ -13,7 +13,8 @@ public class PolicyCenter {
 	public PolicyCenter( WebDriver _driver) {
 		this.driver = _driver;
 		this.driver.manage().window().maximize();
-		this.driver.get("http://72.52.222.78:8180/pc/PolicyCenter.do");
+		this.driver.get("http://10.90.140.53:8180/pc/PolicyCenter.do");
+//		this.driver.get("http://72.52.222.78:8180/pc/PolicyCenter.do");
 	}
 	
 	public void login(String user, String pass) {

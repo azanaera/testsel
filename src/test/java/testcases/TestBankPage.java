@@ -5,9 +5,8 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.*;
+import org.testng.annotations.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -22,7 +21,7 @@ public class TestBankPage {
 	DemoGuru demoGuru;
 	BankPage bankPage;
 	
-	@Before
+	@BeforeTest
 	public void setUp() throws Exception {
         System.setProperty("webdriver.gecko.driver", "E:\\geckodriver.exe");
         driver = new FirefoxDriver();
@@ -31,7 +30,7 @@ public class TestBankPage {
 		
 	}
 	
-	@After
+	@AfterTest
 	public void tearDown() throws Exception {
 //		driver.	quit();
 	}

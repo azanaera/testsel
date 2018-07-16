@@ -1,6 +1,7 @@
 package testcases;
 
-import org.junit.*;
+import org.testng.*;
+import org.testng.annotations.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,19 +9,19 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import gurupages.AgilePage;
 import gurupages.DemoGuru;
-import gurupages.SecurityPage;
+
 
 public class TestAgilePage extends SampleTest {
 	WebDriver driver;
 	DemoGuru demoGuru;
 	AgilePage agilePage;
 	
-	@Before
+	@BeforeTest
 	public void setUp() throws Exception {
        super.setUp();
 	}
 	
-	@After
+	@AfterTest
 	public void tearDown() throws Exception {
 		super.tearDown();
 	}

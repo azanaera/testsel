@@ -1,12 +1,9 @@
 package testcases;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import gurupages.AgilePage;
 import gurupages.DemoGuru;
 import gurupages.SecurityPage;
 
@@ -16,7 +13,7 @@ public class TestSecurityPage {
 	DemoGuru demoGuru;
 	SecurityPage securityPage;
 	
-	@Before
+	@BeforeTest
 	public void setUp() throws Exception {
         System.setProperty("webdriver.gecko.driver", "E:\\geckodriver.exe");
         driver = new FirefoxDriver();
@@ -25,7 +22,7 @@ public class TestSecurityPage {
 		
 	}
 	
-	@After
+	@AfterTest
 	public void tearDown() throws Exception {
 //		driver.	quit();
 	}
