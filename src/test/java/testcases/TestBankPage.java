@@ -40,7 +40,7 @@ public class TestBankPage {
 		demoGuru = new DemoGuru(driver);
 		bankPage = demoGuru.navigateToBankProject();
 		bankPage.login("mngr139362", "sequtYm",true);
-		Customer cus1 = new Customer("Era","1","06-22-1994","e gonzales","silang","cavite",012345,4130803,"era.azana@gmail.com");
+		Customer cus1 = new Customer("Era","1","06-22-1994","e gonzales","silang","cavite","012345","4130803","era.azana@gmail.com");
 		bankPage.navigateToSection("New Customer");
 		bankPage.createCustomer(cus1);
 //		securityPage.navigateToStatement();

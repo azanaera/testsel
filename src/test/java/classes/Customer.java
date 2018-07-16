@@ -11,8 +11,8 @@ public class Customer {
 	public String addr;
 	public String city;
 	public String state;
-	public int pin;
-	public int telephoneno;
+	public String pin;
+	public String telephoneno;
 	public String email;
 	
 	public Customer(String _name,
@@ -21,8 +21,8 @@ public class Customer {
 					String _addr,
 					String _city,
 					String _state,
-					int    _pin,
-					int    _telephoneno,
+					String    _pin,
+					String    _telephoneno,
 					String _email) {
 		name   = _name;
 		gender = _gender;

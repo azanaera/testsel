@@ -8,6 +8,8 @@ import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import pages.*;
 import pages.PolicyCenter;
 
 public class SampleTest {
@@ -31,7 +33,7 @@ public class SampleTest {
 			break;	
 			
 		}
-		driver.get(data.getProperty("url"));
+//		driver.get(data.getProperty("url"));
 		
 	}
 	
@@ -39,12 +41,12 @@ public class SampleTest {
 	public void tearDown() throws Exception {
 //		driver.quit();
 	}
-//	@Test
+	@Test
 	public void verifyLoginPage() throws Exception {
 		polCenter = new PolicyCenter(driver);
 		polCenter.login("su", "gw");
-//		polCenter.navigateToContact();
-		//Person person = contact.navigateToPerson();
+		Contact contact = polCenter.navigateToContact(); // this works
+		Person person = contact.navigateToPerson(); // heres the error
 	}
 
 }

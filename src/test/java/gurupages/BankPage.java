@@ -1,6 +1,5 @@
 package gurupages;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -56,8 +55,8 @@ public class BankPage implements ILog{
 		driver.findElement(By.name("addr")).sendKeys(_customer.addr);
 		driver.findElement(By.name("city")).sendKeys(_customer.city);
 		driver.findElement(By.name("state")).sendKeys(_customer.state);
-		driver.findElement(By.name("pinno")).sendKeys(Integer.toString(_customer.pin));
-		driver.findElement(By.name("telephoneno")).sendKeys(Integer.toString(_customer.telephoneno));
+		driver.findElement(By.name("pinno")).sendKeys(_customer.pin);
+		driver.findElement(By.name("telephoneno")).sendKeys(_customer.telephoneno);
 		driver.findElement(By.name("emailid")).sendKeys(_customer.email);
 		driver.findElement(By.name("sub")).click();
 	}

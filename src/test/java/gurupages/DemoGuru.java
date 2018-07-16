@@ -3,6 +3,8 @@ package gurupages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import classes.PageNavigate;
+
 public class DemoGuru {
 
 	private WebDriver driver;
@@ -14,32 +16,27 @@ public class DemoGuru {
 	}
 	
 	public AgilePage navigateToAgileProject() {
-//		driver.findElement(By.xpath("//*[@id='navbar-brand-centered']/ul/li[4]/a")).click();
-		driver.findElement(By.linkText("Agile Project")).click();
+		PageNavigate.navigateByLinkText(driver, "Agile Project");
 		return new AgilePage(driver);
 	}
 	
 	public BankPage navigateToBankProject() {
-//		driver.findElement(By.xpath("//*[@id='navbar-brand-centered']/ul/li[4]/a")).click();
-		driver.findElement(By.linkText("Bank Project")).click();
+		PageNavigate.navigateByLinkText(driver, "Bank Project");
 		return new BankPage(driver);
 	}
 
 	public SecurityPage navigateToSecurityProject() {
-//		driver.findElement(By.xpath("//*[@id='navbar-brand-centered']/ul/li[4]/a")).click();
-		driver.findElement(By.linkText("Security Project")).click();
+		PageNavigate.navigateByLinkText(driver, "Security Project");
 		return new SecurityPage(driver);
 	}
 
 	public AgilePage navigateToTelecomProject() {
-//		driver.findElement(By.xpath("//*[@id='navbar-brand-centered']/ul/li[4]/a")).click();
-		driver.findElement(By.linkText("Telecom Project")).click();
+		PageNavigate.navigateByLinkText(driver, "Telecom Project");
 		return new AgilePage(driver);
 	}
 
 	public PayGatewayPage navigateToPaymentGatewayProject() {
-//		driver.findElement(By.xpath("//*[@id='navbar-brand-centered']/ul/li[4]/a")).click();
-		driver.findElement(By.linkText("Payment Gateway Project")).click();
+		PageNavigate.navigateByLinkText(driver, "Payment Gateway Project");
 		return new PayGatewayPage(driver);
 	}
 	
