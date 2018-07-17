@@ -13,8 +13,8 @@ public class PolicyCenter {
 	public PolicyCenter( WebDriver _driver) {
 		this.driver = _driver;
 		this.driver.manage().window().maximize();
-		this.driver.get("http://10.90.140.53:8180/pc/PolicyCenter.do");
-//		this.driver.get("http://72.52.222.78:8180/pc/PolicyCenter.do");
+//		this.driver.get("http://10.90.140.53:8180/pc/PolicyCenter.do");
+		this.driver.get("http://72.52.222.78:8180/pc/PolicyCenter.do");
 	}
 	
 	public void login(String user, String pass) {
@@ -36,6 +36,18 @@ public class PolicyCenter {
 		// this is the error
 		// ill just change it in ID
 		return new Contact(driver);
+	}
+
+	public void navigateToPolicyTab() {
+		driver.findElement(By.id("TabBar:PolicyTab-btnInnerEl"));
+	}
+
+	public void navigateToAccountTab() {
+		driver.findElement(By.id("TabBar:AccountTab-btnInnerEl"));		
+	}
+	
+	public void navigateToAdminTab() {
+		driver.findElement(By.id("TabBar:AdminTab-btnInnerEl"));		
 	}
 
 }
