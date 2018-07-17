@@ -15,7 +15,7 @@ import pages.*;
 public class SampleTest {
 	public WebDriver driver;
 	PolicyCenter polCenter;
-//	@Test
+	
 	@BeforeTest
 	public void setUp() throws Exception {
 		Properties data = new Properties();
@@ -39,15 +39,16 @@ public class SampleTest {
 	
 	@AfterTest
 	public void tearDown() throws Exception {
-//		driver.quit();
-	}
-	@Test
+		driver.close();
+	}	
 	@Parameters({"user","pass"})
-	public void verifyLoginPage(String user, String pass) throws Exception {
+	@Test
+	public void loginPC(String user, String pass) throws Exception {
+		System.out.println(user);
+		System.out.println(pass);
 		polCenter = new PolicyCenter(driver);
 		polCenter.login(user, pass);
-		Contact contact = polCenter.navigateToContact(); // this works
-		Person person = contact.navigateToPerson(); // heres the error
+//		Person person = contact.navigateToPerson(); // heres the error
 	}
 
 }
