@@ -39,15 +39,13 @@ public class SampleTest {
 	
 	@AfterTest
 	public void tearDown() throws Exception {
-		driver.close();
+		driver.quit();
 	}	
-	@Parameters({"user","pass"})
+//	@Parameters({"user","pass"})
 	@Test
 	public void loginPC(String user, String pass) throws Exception {
-		System.out.println(user);
-		System.out.println(pass);
 		polCenter = new PolicyCenter(driver);
-		polCenter.login(user, pass);
+		polCenter.login("su", "gw");
 //		Person person = contact.navigateToPerson(); // heres the error
 	}
 
