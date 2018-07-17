@@ -7,24 +7,21 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import gurupages.DemoGuru;
 import gurupages.SecurityPage;
 
-public class TestSecurityPage {
+public class TestSecurityPage extends SampleTest{
 
-	WebDriver driver;
+//	WebDriver driver;
 	DemoGuru demoGuru;
 	SecurityPage securityPage;
 	
 	@BeforeTest
 	public void setUp() throws Exception {
-        System.setProperty("webdriver.gecko.driver", "E:\\geckodriver.exe");
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+       super.setUp();
 		
 	}
 	
 	@AfterTest
 	public void tearDown() throws Exception {
-//		driver.	quit();
+		super.tearDown();
 	}
 	@Test
 	public void verifyLoginPage() throws Exception {

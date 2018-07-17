@@ -12,7 +12,7 @@ import gurupages.DemoGuru;
 
 
 public class TestAgilePage extends SampleTest {
-	WebDriver driver;
+//	WebDriver driver;
 	DemoGuru demoGuru;
 	AgilePage agilePage;
 	
@@ -30,7 +30,7 @@ public class TestAgilePage extends SampleTest {
 		demoGuru = new DemoGuru(driver);
 		agilePage = demoGuru.navigateToAgileProject();
 		
-		agilePage.login("","",false);
+		//agilePage.login("","",false);
 		
 		agilePage.login("1303", "Guru99",true);
 		agilePage.navigateToStatement();

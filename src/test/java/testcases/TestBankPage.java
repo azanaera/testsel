@@ -14,25 +14,22 @@ import classes.Customer;
 import gurupages.BankPage;
 import gurupages.DemoGuru;
 
-public class TestBankPage {
+public class TestBankPage extends SampleTest{
 
 
-	WebDriver driver;
+//	WebDriver driver;
 	DemoGuru demoGuru;
 	BankPage bankPage;
 	
 	@BeforeTest
 	public void setUp() throws Exception {
-        System.setProperty("webdriver.gecko.driver", "E:\\geckodriver.exe");
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+       super.setUp();
 		
 	}
 	
 	@AfterTest
 	public void tearDown() throws Exception {
-//		driver.	quit();
+		super.tearDown();
 	}
 	@Test
 	public void verifyNewCustomer() throws Exception {

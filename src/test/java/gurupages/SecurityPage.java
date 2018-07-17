@@ -39,7 +39,7 @@ public class SecurityPage implements ILog {
 		driver.findElement(By.name("telephoneno")).sendKeys(Integer.toString(mobile));
 		driver.findElement(By.name("addr")).sendKeys(message);
 		driver.findElement(By.name("fileToUpload")).sendKeys(directoryFile);
-//		driver.findElement(By.name("sub")).click();
+		driver.findElement(By.name("sub")).click();
 	}
 	@Override
 	public void login(String user, String pass, boolean canLog) {

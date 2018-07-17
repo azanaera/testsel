@@ -11,18 +11,18 @@ public class PolicyCenter {
 	private WebDriver driver;
 	
 	public PolicyCenter( WebDriver _driver) {
-		this.driver = _driver;
-		this.driver.manage().window().maximize();
-//		this.driver.get("http://10.90.140.53:8180/pc/PolicyCenter.do");
-		this.driver.get("http://72.52.222.78:8180/pc/PolicyCenter.do");
+		driver = _driver;
+		driver.manage().window().maximize();
+//		driver.get("http://10.90.140.53:8180/pc/PolicyCenter.do");
+		driver.get("http://72.52.222.78:8180/pc/PolicyCenter.do");
 	}
 	
 	public void login(String user, String pass) {
 		driver.findElement(By.id("Login:LoginScreen:LoginDV:username-inputEl")).sendKeys(user);
 		driver.findElement(By.id("Login:LoginScreen:LoginDV:password-inputEl")).sendKeys(pass);
 		driver.findElement(By.id("Login:LoginScreen:LoginDV:submit-btnInnerEl")).click();
-		WebDriverWait wait = new WebDriverWait(driver, 40);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("QuickJump-inputEl")));
+//		WebDriverWait wait = new WebDriverWait(driver, 40);
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("QuickJump-inputEl")));
 	}
 	
 	public Contact navigateToContact() {
