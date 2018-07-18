@@ -20,23 +20,20 @@ import gurupages.DemoGuru;
 public class TestBankPage extends SampleTest{
 
 
-//	WebDriver driver;
 	DemoGuru demoGuru;
 	BankPage bankPage;
-//	
-//	@BeforeMethod
-//	@BeforeTest
+	
+	@BeforeMethod
 	public void setUp() throws Exception {
        super.setUp();
 		
 	}
 	
-//	@AfterMethod
-//	@AfterTest
+	@AfterMethod
 	public void tearDown() throws Exception {
 		super.tearDown();
 	}
-//	@Tesst
+	@Test
 	public void verifyNewCustomer() throws Exception {
 		demoGuru = new DemoGuru(driver);
 		bankPage = demoGuru.navigateToBankProject();

@@ -18,22 +18,19 @@ import gurupages.DemoGuru;
 
 
 public class TestAgilePage extends SampleTest {
-//	WebDriver driver;
 	DemoGuru demoGuru;
 	AgilePage agilePage;
 	
-//	@BeforeMethod
-//	@BeforeTest
+	@BeforeMethod
 	public void setUp() throws Exception {
        super.setUp();
 	}
 	
-//	@AfterMethod
-//	@AfterTest
+	@AfterMethod
 	public void tearDown() throws Exception {
 		super.tearDown();
 	}
-//	@Test
+	@Test
 	public void verifyAgileAccountAndLogout() throws Exception {
 		demoGuru = new DemoGuru(driver);
 		agilePage = demoGuru.navigateToAgileProject();

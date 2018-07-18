@@ -12,23 +12,20 @@ import gurupages.SecurityPage;
 
 public class TestSecurityPage extends SampleTest{
 
-//	WebDriver driver;
 	DemoGuru demoGuru;
 	SecurityPage securityPage;
 	
-//	@BeforeMethod
-//	@BeforeTest
+	@BeforeMethod
 	public void setUp() throws Exception {
        super.setUp();
 		
 	}
 	
-//	@AfterMethod
-//	@AfterTest
+	@AfterMethod
 	public void tearDown() throws Exception {
 		super.tearDown();
 	}
-//	@Test
+	@Test
 	public void verifyLoginPage() throws Exception {
 		demoGuru = new DemoGuru(driver);
 		securityPage = demoGuru.navigateToSecurityProject();
