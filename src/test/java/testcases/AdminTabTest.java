@@ -37,7 +37,7 @@ public class AdminTabTest extends SampleTest {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		WebElement element = wait.until(
-		ExpectedConditions.visibilityOfElementLocated(By.id("TabBar:AdminTab-btnInnerEl")));
+		ExpectedConditions.elementToBeClickable(By.id("TabBar:AdminTab-btnInnerEl")));
 		super.polCenter.navigateToAdminTab();
 	}
 }
