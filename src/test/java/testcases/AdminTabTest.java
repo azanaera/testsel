@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import gurupages.DemoGuru;
+import pages.PolicyCenter;
 
 
 public class AdminTabTest extends SampleTest {
@@ -32,12 +33,9 @@ public class AdminTabTest extends SampleTest {
 	@Parameters({"uid","pass"})
 	@Test
 	public void navToAdmin(String user, String pass) throws Exception {
+		super.polCenter = new PolicyCenter(super.driver);
 		super.loginPC(user, pass);
-//		super.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		WebElement element = wait.until(
-		ExpectedConditions.elementToBeClickable(By.id("TabBar:AdminTab-btnInnerEl")));
+		super.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		super.polCenter.navigateToAdminTab();
 	}
 }

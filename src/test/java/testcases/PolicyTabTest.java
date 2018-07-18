@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 
 import gurupages.DemoGuru;
+import pages.PolicyCenter;
 
 
 public class PolicyTabTest extends SampleTest {
@@ -26,6 +27,7 @@ public class PolicyTabTest extends SampleTest {
 	@Parameters({"uid","pass"})
 	@Test
 	public void navToPolicy(String user, String pass) throws Exception {
+		super.polCenter = new PolicyCenter(super.driver);
 		super.loginPC(user, pass);
 		super.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		super.polCenter.navigateToPolicyTab();
