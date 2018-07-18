@@ -25,7 +25,7 @@ public class AccountTabTest extends SampleTest {
 	@Test
 	public void navToAccount(String user, String pass) throws Exception {
 		super.polCenter = new PolicyCenter(super.driver);
-		super.polCenter.login("su", "gw");
+		super.polCenter.login(user,pass);
 		super.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		super.polCenter.navigateToAccountTab();
 	}

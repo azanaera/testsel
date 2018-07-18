@@ -34,7 +34,7 @@ public class AdminTabTest extends SampleTest {
 	@Test
 	public void navToAdmin(String user, String pass) throws Exception {
 		super.polCenter = new PolicyCenter(super.driver);
-		super.loginPC(user, pass);
+		super.polCenter.login(user, pass);
 		super.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		super.polCenter.navigateToAdminTab();
 	}
