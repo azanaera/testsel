@@ -29,7 +29,7 @@ public class AdminTabTest extends SampleTest {
 	@Test
 	public void navToAdmin(String user, String pass) throws Exception {
 		super.loginPC(user, pass);
-		super.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		super.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		super.polCenter.navigateToAdminTab();
 	}
 }
