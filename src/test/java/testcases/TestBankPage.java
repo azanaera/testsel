@@ -1,5 +1,8 @@
 package testcases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -20,18 +23,20 @@ public class TestBankPage extends SampleTest{
 //	WebDriver driver;
 	DemoGuru demoGuru;
 	BankPage bankPage;
-	
-	@BeforeTest
+//	
+//	@BeforeMethod
+//	@BeforeTest
 	public void setUp() throws Exception {
        super.setUp();
 		
 	}
 	
-	@AfterTest
+//	@AfterMethod
+//	@AfterTest
 	public void tearDown() throws Exception {
 		super.tearDown();
 	}
-	@Test
+//	@Tesst
 	public void verifyNewCustomer() throws Exception {
 		demoGuru = new DemoGuru(driver);
 		bankPage = demoGuru.navigateToBankProject();

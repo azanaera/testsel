@@ -1,5 +1,12 @@
 package testcases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -16,7 +23,7 @@ public class SampleTest {
 	public WebDriver driver;
 	PolicyCenter polCenter;
 	
-	@BeforeTest
+	@BeforeMethod
 	public void setUp() throws Exception {
 		Properties data = new Properties();
 		FileInputStream fis = new FileInputStream(new File("C:\\Users\\eazana.PICL-9FJPRF2\\eclipse-workspace\\TestSelenium\\src\\test\\java\\data\\browserdata.properties"));
@@ -37,15 +44,15 @@ public class SampleTest {
 		
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void tearDown() throws Exception {
 		driver.quit();
 	}	
-//	@Parameters({"user","pass"})
+	@Parameters({"uid","pass"})
 	@Test
 	public void loginPC(String user, String pass) throws Exception {
 		polCenter = new PolicyCenter(driver);
-		polCenter.login("su", "gw");
+		polCenter.login(user,pass);
 //		Person person = contact.navigateToPerson(); // heres the error
 	}
 

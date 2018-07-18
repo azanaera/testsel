@@ -39,15 +39,15 @@ public class PolicyCenter {
 	}
 
 	public void navigateToPolicyTab() {
-		driver.findElement(By.id("TabBar:PolicyTab-btnInnerEl"));
+		driver.findElement(By.id("TabBar:PolicyTab-btnInnerEl")).click();
 	}
 
 	public void navigateToAccountTab() {
-		driver.findElement(By.id("TabBar:AccountTab-btnInnerEl"));		
+		driver.findElement(By.id("TabBar:AccountTab-btnInnerEl")).click();		
 	}
 	
 	public void navigateToAdminTab() {
-		driver.findElement(By.id("TabBar:AdminTab-btnInnerEl"));		
+		driver.findElement(By.id("TabBar:AdminTab-btnInnerEl")).click();		
 	}
 
 }

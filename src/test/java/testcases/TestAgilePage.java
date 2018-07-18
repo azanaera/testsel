@@ -1,5 +1,11 @@
 package testcases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.testng.*;
 import org.testng.annotations.*;
 import org.openqa.selenium.Keys;
@@ -16,16 +22,18 @@ public class TestAgilePage extends SampleTest {
 	DemoGuru demoGuru;
 	AgilePage agilePage;
 	
-	@BeforeTest
+//	@BeforeMethod
+//	@BeforeTest
 	public void setUp() throws Exception {
        super.setUp();
 	}
 	
-	@AfterTest
+//	@AfterMethod
+//	@AfterTest
 	public void tearDown() throws Exception {
 		super.tearDown();
 	}
-	@Test
+//	@Test
 	public void verifyAgileAccountAndLogout() throws Exception {
 		demoGuru = new DemoGuru(driver);
 		agilePage = demoGuru.navigateToAgileProject();

@@ -1,5 +1,8 @@
 package testcases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,17 +16,19 @@ public class TestSecurityPage extends SampleTest{
 	DemoGuru demoGuru;
 	SecurityPage securityPage;
 	
-	@BeforeTest
+//	@BeforeMethod
+//	@BeforeTest
 	public void setUp() throws Exception {
        super.setUp();
 		
 	}
 	
-	@AfterTest
+//	@AfterMethod
+//	@AfterTest
 	public void tearDown() throws Exception {
 		super.tearDown();
 	}
-	@Test
+//	@Test
 	public void verifyLoginPage() throws Exception {
 		demoGuru = new DemoGuru(driver);
 		securityPage = demoGuru.navigateToSecurityProject();
