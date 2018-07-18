@@ -1,8 +1,5 @@
 package testcases;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -33,6 +30,8 @@ public class TestBankPage extends SampleTest{
 	public void tearDown() throws Exception {
 		super.tearDown();
 	}
+
+	@Parameters({"uid","pass"})
 	@Test
 	public void verifyNewCustomer() throws Exception {
 		demoGuru = new DemoGuru(driver);
