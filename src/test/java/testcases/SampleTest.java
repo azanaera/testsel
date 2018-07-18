@@ -26,8 +26,8 @@ public class SampleTest {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		Properties data = new Properties();
-		System.out.println();
-		FileInputStream fis = new FileInputStream("browserdata.properties");
+		System.out.println(System.getProperty("user.dir")+"\\browserdata.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\browserdata.properties");
 		data.load(fis);
 		
 		switch(data.getProperty("browser")) {
