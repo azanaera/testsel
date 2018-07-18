@@ -33,7 +33,7 @@ public class AdminTabTest extends SampleTest {
 	@Test
 	public void navToAdmin(String user, String pass) throws Exception {
 		super.loginPC(user, pass);
-		super.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		super.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		WebElement element = wait.until(
