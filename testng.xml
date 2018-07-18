@@ -5,9 +5,9 @@
       <parameter name="uid" value="su"/>
       <parameter name="pass" value="gw"/>
     <classes>
-      <class name="testcases.SampleTest"/>
       <class name="testcases.AccountTabTest"/>
       <class name="testcases.AdminTabTest"/>
+      <class name="testcases.SampleTest"/>
       <class name="testcases.PolicyTabTest"/>
     </classes>
   </test> <!-- Test -->
