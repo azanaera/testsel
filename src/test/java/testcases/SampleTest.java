@@ -26,7 +26,7 @@ public class SampleTest {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		Properties data = new Properties();
-		FileInputStream fis = new FileInputStream(new File("C:\\Users\\eazana.PICL-9FJPRF2\\eclipse-workspace\\TestSelenium\\src\\test\\java\\data\\browserdata.properties"));
+		FileInputStream fis = new FileInputStream(new File(System.getProperty("user.dir") + "\\browserdata.properties"));
 		data.load(fis);
 		
 		switch(data.getProperty("browser")) {
