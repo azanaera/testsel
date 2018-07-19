@@ -8,7 +8,6 @@
       <class name="testcases.SampleTest"/>
       <class name="testcases.AccountTabTest"/>
       <class name="testcases.PolicyTabTest"/>
-      <class name="testcases.AdminTabTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
