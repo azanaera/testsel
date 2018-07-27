@@ -57,6 +57,11 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.0</version>
           <configuration>
+          <testSourceDirectory>TestSelenium/src/main/java</testSourceDirectory>
+          <includes>
+          	<exclude>**/*sampleStepDef.java</exclude>
+          </includes>
+          
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
